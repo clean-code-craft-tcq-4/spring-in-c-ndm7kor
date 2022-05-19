@@ -1,3 +1,5 @@
+#ifndef __STATS_H
+#define __STATS_H
 
 struct Stats compute_statistics(const float* numberset, int setlength);
 
@@ -18,4 +20,4 @@ void Email_alerter(void);
 void Led_alerter(void);
 
 
-
+#endif
