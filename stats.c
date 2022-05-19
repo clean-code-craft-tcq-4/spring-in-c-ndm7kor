@@ -58,11 +58,13 @@ void check_and_alert (float maxThreshold, alerter_funcptr alerters[], struct Sta
 void emailAlerter()
 {
     emailAlertCallCount++;
+	Printf("Email sent");
 }
 
 void ledAlerter()
 {
     ledAlertCallCount++;
+	Printf("LED Glow");
 }
 
     
