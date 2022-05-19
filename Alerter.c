@@ -9,8 +9,26 @@ void check_and_alert (float maxThreshold, alerter_funcptr alerters[], struct Sta
 {
     if(	computedStats.max > maxThreshold )
 	{
-			alerters[0]();
-			alerters[1]();
+	    emailAlertCallCount ++;
+	    ledAlertCallCount ++;
+	    
+	    if(emailAlertCallCount == 1)
+	    {
+		    alerters[0]();
+	    }
+	    else
+	    {
+		    /* do nothing */
+	    }
+	    
+	    if(emailAlertCallCount == 1)
+	    {
+		    alerters[1]();
+	    }
+	    else
+	    {
+		    /* do nothing */
+	    }
 	}
     else
     {
@@ -20,13 +38,13 @@ void check_and_alert (float maxThreshold, alerter_funcptr alerters[], struct Sta
 
 void emailAlerter()
 {
-    emailAlertCallCount ++;
+    //emailAlertCallCount ++;
     printf("Email sent");
 }
 
 void ledAlerter()
 {
-    ledAlertCallCount ++;
+    //ledAlertCallCount ++;
     printf("LED Alert");
 }
 
