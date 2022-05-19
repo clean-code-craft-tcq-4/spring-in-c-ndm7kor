@@ -55,12 +55,12 @@ void check_and_alert (float maxThreshold, alerter_funcptr alerters[], struct Sta
 }
 
 
-void emailalerter()
+void emailAlerter()
 {
     emailAlertCallCount++;
 }
 
-void ledalerter()
+void ledAlerter()
 {
     ledAlertCallCount++;
 }
